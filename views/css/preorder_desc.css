@@ -1,0 +1,190 @@
+/**
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License version 3.0
+* that is bundled with this package in the file LICENSE.txt
+* It is also available through the world-wide-web at this URL:
+* https://opensource.org/licenses/AFL-3.0
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade this module to a newer
+* versions in the future. If you wish to customize this module for your needs
+* please refer to CustomizationPolicy.txt file inside our module for more information.
+*
+* @author Webkul IN
+* @copyright Since 2010 Webkul
+* @license https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+*/
+
+.flip-clock-wrapper ul {
+    width: 20px;
+    height: 25px;
+}
+
+.flip-clock-wrapper ul li {
+    line-height: 26px;
+}
+
+.flip-clock-wrapper ul li a div div.inn {
+    font-size: 14px;
+}
+
+.flip-clock-dot {
+    width: 7px;
+    height: 7px;
+}
+
+.flip-clock-dot.top {
+    top: 20px;
+}
+
+.flip-clock-dot.bottom {
+    bottom: 32px;
+}
+
+.flip-clock-divider .flip-clock-label {
+    right: -36px;
+    font-size: 10px;
+}
+
+.flip-clock-divider.minutes .flip-clock-label {
+    right: -42px;
+}
+
+.flip-clock-divider.seconds .flip-clock-label {
+    right: -44px;
+}
+
+.flip-clock-divider {
+    width: 16px;
+    height: 45px;
+}
+
+
+/*to make flip clock responsive on category page*/
+
+/* @media (min-width:600px) and (max-width:767px) {
+    .flip-clock-wrapper {
+        margin-left: 10%;
+    }
+}
+
+@media (min-width:366px) and (max-width:480px) {
+    .flip-clock-wrapper {
+        margin-left: 13%;
+    }
+}
+
+@media (min-width:1200px) {
+    .flip-clock-wrapper ul {
+        width: 20px;
+    }
+    .flip-clock-divider.seconds .flip-clock-label {
+        right: -48px;
+    }
+    .flip-clock-divider.minutes .flip-clock-label {
+        right: -43px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1199px) {
+    .flip-clock-wrapper ul {
+        width: 17px;
+        height: 30px;
+    }
+    .flip-clock-wrapper ul li {
+        line-height: 32px;
+    }
+    .flip-clock-wrapper .inn {
+        font-size: 19px !important;
+    }
+    .flip-clock-divider {
+        width: 13px;
+    }
+    .flip-clock-divider .flip-clock-dot {
+        width: 6px;
+        height: 6px;
+    }
+    .flip-clock-dot.bottom {
+        bottom: 37px;
+    }
+    .flip-clock-dot.top {
+        top: 21px;
+    }
+    .flip-clock-divider .flip-clock-label {
+        right: -35px;
+    }
+    .flip-clock-divider.seconds .flip-clock-label {
+        right: -48px;
+    }
+    .flip-clock-divider.minutes .flip-clock-label {
+        right: -43px;
+    }
+    .flip-clock-divider .flip-clock-label {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:480px) and (max-width:767px) {
+    .flip-clock-wrapper ul {
+        width: 17px;
+        height: 30px;
+    }
+    .flip-clock-wrapper ul li {
+        line-height: 32px;
+    }
+    .flip-clock-wrapper .inn {
+        font-size: 19px !important;
+    }
+    .flip-clock-divider {
+        width: 13px;
+    }
+    .flip-clock-divider .flip-clock-dot {
+        width: 6px;
+        height: 6px;
+    }
+    .flip-clock-dot.bottom {
+        bottom: 37px;
+    }
+    .flip-clock-dot.top {
+        top: 21px;
+    }
+    .flip-clock-divider .flip-clock-label {
+        right: -35px;
+    }
+    .flip-clock-divider.seconds .flip-clock-label {
+        right: -48px;
+    }
+    .flip-clock-divider.minutes .flip-clock-label {
+        right: -43px;
+    }
+    .flip-clock-divider .flip-clock-label {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:240px) and (max-width:479px) {
+    .flip-clock-wrapper ul {
+        width: 17px !important;
+    }
+} */
+
+.custominput {
+    width: 25%;
+    float: left;
+    height: 33px;
+    margin-left: 25px;
+}
+
+.customloader {
+    display: none;
+}
+
+.product-prices #preorderprice_timer ul.flip div {
+    margin-bottom: 0px !important;
+}
+
+.wkcustom h5 {
+    text-align: left;
+}

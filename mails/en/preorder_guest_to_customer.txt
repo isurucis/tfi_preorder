@@ -1,0 +1,12 @@
+Hello, User
+
+Your account has been transformed from guest account to customer account, now you can easily complete your preorder when it will be available
+
+Details
+Name: {fullname}
+Email: {email}
+Password: {password}
+
+{shop_name} - {shop_url}
+
+{shop_url} powered by PrestaShop&trade;

@@ -1,0 +1,121 @@
+/**
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License version 3.0
+* that is bundled with this package in the file LICENSE.txt
+* It is also available through the world-wide-web at this URL:
+* https://opensource.org/licenses/AFL-3.0
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade this module to a newer
+* versions in the future. If you wish to customize this module for your needs
+* please refer to CustomizationPolicy.txt file inside our module for more information.
+*
+* @author Webkul IN
+* @copyright Since 2010 Webkul
+* @license https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+*/
+
+@media (min-width:992px) and (max-width:1199px) {
+  .flip-clock-wrapper ul {
+    width: 20px !important;
+  }
+  .flip-clock-wrapper .inn {
+    font-size: 20px !important;
+  }
+  .flip-clock-divider {
+    width: 15px !important;
+  }
+  .flip-clock-divider .flip-clock-dot {
+    width: 6px !important;
+    height: 6px !important;
+  }
+}
+@media (min-width:768px)  and (max-width:991px) {
+  .flip-clock-wrapper ul {
+    width: 17px !important;
+    height: 30px !important;
+  }
+  .flip-clock-wrapper ul li {
+    line-height: 32px !important;
+  }
+  .flip-clock-wrapper .inn {
+    font-size: 19px !important;
+  }
+  .flip-clock-divider {
+    width: 13px !important;
+  }
+  .flip-clock-divider .flip-clock-dot {
+    width: 6px !important;
+    height: 6px !important;
+  }
+  .flip-clock-dot.bottom {
+    bottom: 37px !important;
+  }
+  .flip-clock-dot.top {
+    top: 21px !important;
+  }
+  .flip-clock-divider .flip-clock-label {
+    right: -35px !important;
+  }
+  .flip-clock-divider.seconds .flip-clock-label {
+    right: -48px !important;
+  }
+  .flip-clock-divider.minutes .flip-clock-label {
+    right: -43px !important;
+  }
+  .flip-clock-divider .flip-clock-label {
+    font-size: 12px !important;
+  }
+}
+@media (min-width:315px) and (max-width:479px) {
+  .flip-clock-wrapper ul {
+    width: 17px !important;
+  }
+  .flip-clock-wrapper .inn {
+    font-size: 20px !important;
+  }
+  .flip-clock-divider {
+    width: 13px !important;
+  }
+  .flip-clock-divider .flip-clock-dot {
+    width: 6px !important;
+    height: 6px !important;
+  }
+  .flip-clock-dot {
+    left: 3px !important;
+  }
+  .flip-clock-divider .flip-clock-label {
+    font-size: 13px !important;
+  }
+}
+@media (min-width:240px) and (max-width:314px) {
+  .flip-clock-wrapper ul {
+    width: 9px !important;
+    height: 30px!important;
+  }
+  .flip-clock-wrapper .inn {
+    font-size: 15px !important;
+  }
+  .flip-clock-divider {
+    width: 9px !important;
+    height: 45px!important;
+  }
+  .flip-clock-divider .flip-clock-dot {
+    width: 4px !important;
+    height: 4px !important;
+  }
+  .flip-clock-dot {
+    left: 2px !important;
+  }
+  .flip-clock-dot.top {
+    top: 23px!important;
+  }
+  .flip-clock-divider .flip-clock-label {
+    font-size: 8px !important;
+    right: -27px !important;
+
+  }
+
+}

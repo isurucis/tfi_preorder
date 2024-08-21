@@ -1,0 +1,71 @@
+/**
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License version 3.0
+* that is bundled with this package in the file LICENSE.txt
+* It is also available through the world-wide-web at this URL:
+* https://opensource.org/licenses/AFL-3.0
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade this module to a newer
+* versions in the future. If you wish to customize this module for your needs
+* please refer to CustomizationPolicy.txt file inside our module for more information.
+*
+* @author Webkul IN
+* @copyright Since 2010 Webkul
+* @license https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+*/
+
+.preordercontent {
+    margin-bottom: 10px;
+    background: white none repeat scroll 0 0;
+    box-shadow: 2px 2px 11px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    padding: 1.25rem 1.875rem;
+}
+
+#wk_pre_price {
+    /* color: #0088C2; */
+}
+
+strike {
+    color: #9F9D9E;
+    font-size: 16px;
+}
+
+p.date_available {
+    font-size: 14px;
+    /* text-transform: uppercase; */
+}
+
+span#tx {
+    color: #808080;
+    font-size: 14px;
+}
+
+
+/* div.preorder_info {
+    border: 1px solid #BDB0B0;
+    padding: 10px;
+} */
+
+p.full_price {
+    border: 1px solid #BDB0B0;
+    padding: 10px;
+}
+
+.box-info-product .exclusive span {
+    font-size: 18px !important;
+}
+
+.custominput {
+    float: left;
+    width: 25%;
+    height: 35px;
+    margin-left: 13px;
+}
+
+.customloader {
+    display: none;
+}

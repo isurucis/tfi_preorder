@@ -1,0 +1,10 @@
+Hi {firstname} {lastname},
+
+Your preorder product {product_name} is now in store. You have paid {paid_amount} as preorder price for {product_name}.
+Please login to your account and complete your preorder product before going out of stock again! {allowed_days}
+
+Thank you.
+
+{shop_name} - {shop_url}
+
+{shop_url} powered by PrestaShop&trade;

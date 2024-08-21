@@ -1,0 +1,171 @@
+/**
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License version 3.0
+* that is bundled with this package in the file LICENSE.txt
+* It is also available through the world-wide-web at this URL:
+* https://opensource.org/licenses/AFL-3.0
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade this module to a newer
+* versions in the future. If you wish to customize this module for your needs
+* please refer to CustomizationPolicy.txt file inside our module for more information.
+*
+* @author Webkul IN
+* @copyright Since 2010 Webkul
+* @license https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+*/
+
+.wk_pre_warn {
+    background-color: #FCF8E3;
+    border-color: #FAEBCC;
+    color: #C09853;
+    border-radius: 3px 3px 3px 3px;
+    margin-bottom: 17px;
+    padding: 15px;
+}
+
+.mp_seller_products {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.prosellerinfo {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    background-color: #F7F5F6;
+    border: 1px solid #D9D8D4;
+    margin-bottom: 5px;
+}
+
+.prosellerinfo:hover {
+    background-color: #EEEDEB;
+}
+
+.wk_seller_name {
+    float: left;
+    width: 22%;
+    margin-top: 15px;
+}
+
+.wk_seller_name span {
+    float: left;
+    width: 100%;
+}
+
+.wk_pro_price {
+    float: left;
+    width: 15%;
+    margin-top: 23px;
+}
+
+.wk_pro_add_to_cart {
+    float: left;
+    width: 11%;
+    margin-top: 8px;
+}
+
+.wk_seller_name strong {
+    font-size: 16px;
+}
+
+.wk_product_image {
+    float: left;
+    width: 7%;
+}
+
+.wk_pro_quantity {
+    float: left;
+    width: 22%;
+    margin-top: 23px;
+}
+
+.wk_seller_badges {
+    float: left;
+    width: 34%;
+}
+
+#wk_shop_name {
+    float: left;
+    width: 100%;
+    color: #394B55;
+}
+
+#wk_seller_name {
+    font-size: 12px;
+    color: #394B55;
+    float: left;
+    width: 75%;
+}
+
+#wk_pro_quan {
+    float: left;
+    font-size: 16px;
+    width: 100%;
+}
+
+.wk_product_image img {
+    height: 60px !important;
+    width: 60px !important;
+}
+
+.wk_prod_content {
+    float: left;
+    width: 88%;
+    margin-right: 5px;
+}
+
+#products_ul {
+    position: absolute;
+    width: 97%;
+    max-height: 200px;
+    overflow-x: auto;
+    z-index: 1000;
+    background-color: #fff;
+}
+
+#products_ul p {
+    background-color: #F1F9FF;
+    margin-bottom: 1px;
+    border: 1px solid #ddd;
+}
+
+#products_ul p a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#products_ul p a:hover {
+    color: #fff;
+    background-color: gray;
+    cursor: pointer;
+}
+
+#add_img {
+    cursor: pointer;
+}
+
+#get_product_name_div {
+    background: none repeat scroll 0 0 #2f8cd6;
+    color: #fff;
+    margin-top: 6px;
+}
+
+.searchimage {
+    left: 4px;
+    position: absolute;
+    top: 27px;
+    width: 2.3%;
+}
+
+#ui-datepicker-div {
+    z-index: 10000 !important;
+}
+
+#wk_preorder_product_form .select2-choice {
+    text-decoration: none !important;
+}

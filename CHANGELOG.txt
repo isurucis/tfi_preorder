@@ -1,0 +1,353 @@
+------------------------------------------------------------------------
+Change Log : V5.3.0 To V5.3.1 | COMPATIBLE:: PRESTASHOP V1.7 & V8.x.x
+------------------------------------------------------------------------
+## Update Policy:
+    - Update only zip file of module new version
+
+## Bug fixed:
+	- Fixed add-to-cart disabled issue when selected quantity is more than remaining quantity.
+	- Fixed preorder status issue on orders without preorder products.
+	- Fixed bulk activate/deactivate issue on full payment.
+	- Fixed full payment preorder manually available stock management issue.
+	- Fixed dynamic price product add-to-cart issue.
+	- Fixed upgrade script issue.
+	- Added required and invalid validation for full content and partial content in configuration
+	- Fixed multistore product preview and timer enable/disable issue.
+	- Fixed translation issues
+
+## Improvements:
+	- Improved module performance
+	- Improve limited time feature content
+	- Allow all countries for preorder on module installation
+	- Send single mail for preorder_reserved to customer even if order has multiple preorder products
+	- Send all preorder products name in preorder_reserved mail
+
+------------------------------------------------------------------------
+Change Log : V5.2.1 To V5.3.0 | COMPATIBLE:: PRESTASHOP V1.7 & V8.x.x
+------------------------------------------------------------------------
+## Update Policy:
+    - Update only zip file of module new version
+
+## Improvements:
+	- Display the Preorder badge on the product on the cart page.
+	- Display the original price along with the preorder price on the cart and checkout page.
+	- Provide admin functionality to set a time limit for preorder completion.
+	- Provide functionality to set preorders for specific countries or groups.
+	- Display preorder order details on the order details page on the admin end.
+	- Replaced Tools::displayPrice() with Locale::formatPrice()
+
+## Bug fixed:
+	- Fixed shipping cost issue in partial/dynamic payment.
+	- Fixed preorder order status issue when order get cancelled through orders section.
+	- Fixed filter issues on order listing page in the preorder order controller.
+
+## Hooks:
+	- Registered a new hook `displayAdminOrderMain` to display preorder details on order details page.
+
+## Table Structure changed:
+  	-Table altered:
+	- `wk_preorder_product_customer`
+	- Add new column `limited_time` after `state`
+	- Add new column `allowed_days` after `limited_time`
+	- Add new column `stock_rollback` after `allowed_days
+
+------------------------------------------------------------------------
+Change Log : V5.2.0 To V5.2.1 | COMPATIBLE:: PRESTASHOP V1.7 & V8.x.x
+------------------------------------------------------------------------
+## Update Policy:
+    - Update only zip file of module new version
+
+## Bug fixed:
+	- Fixed deactive product display issue on all preorder product page
+	- Fixed both price display issue on popular products (home page) and all preorder product page
+	- Fixed all carriers display issue on checkout page in case of full payment preorder
+	- Fixed original price display issue with discount on category page
+	- Add dynamic price preorder in cart using specificprocess controller
+
+
+-------------------------------------------------------------------
+Change Log : V5.1.0 To V5.2.0 | COMPATIBLE:: PRESTASHOP V1.7 & V8.x
+-------------------------------------------------------------------
+## Update Policy:
+    - Update only zip file of module new version
+
+## Improvements:
+- PrestaShop 8 compatible
+- Replaced Tools::jsonDecode with json_decode
+- Replaced Tools::jsonEncode with json_encode
+- Replaced Attribute:: with ProductAttribute::
+- Provided option to complete order from preorder listing page in FO
+- Ask customer to add dynamic price according to configured customer group
+- Displayed product wise order listing at customer end under 'preorder orders'
+- Rectricted to checkout with same country, state and postcode when completing preorder
+
+## Bug fixed:
+- Fixed tax calculation issue for preorder products
+- Fixed updateOrderStatusAsPreorderStatus() arg issue
+- Fixed cookie reset issue after redirecting from payment gateway
+
+## Hooks:
+- Registered a new hook `actionObjectCombinationDeleteAfter` to delete preorder product if combination is deleted from catalog
+
+## Module files:
+- Deleted "PreorderProductMap.php" class file
+- Deleted "availablepreorderproduct.php" front controller file
+- Deleted "suggestproducts.php" front controller file
+
+## Table Structure changed:
+- Delete table `wk_preorder_product_map`
+- Delete table `wk_preorder_product_map_shop`
+- Added new table `wk_preorder_completion_data`
+
+-----------------------------------------------------------------
+Change Log : V5.0.2 To V5.1.0 | COMPATIBLE:: PRESTASHOP V1.7
+-----------------------------------------------------------------
+## Update Policy:
+    - Update only zip file of module new version
+
+## Improvements:
+ - Manage Prebooked quantity after cancel preorder.
+ - Admin can create preorder with 0 price.
+ - Admin can choose to display product actual price, preorder price or both at product page and listing page.
+ - Prebooked quantity of preorder will be managed after cancellation of preorder.
+ - Admin can track the orders of customers complete preorder from the manage orders tab.
+ - Displayed Out of stock message on product page if the preorder product is out of stock.
+ - Displayed product reference in preorder list.
+ - If customer has not entered any custom price for dynamic preorder, then minimum preorder price will be set for the preorder product for that customer.
+ - Added a recreation_date column to manage the date on which preorder product gets active after available preorder.
+ - Admin can restrict the checkout of normal products with the active preorder products.
+ - Specific price can be applied on preorder.
+ - If customer does not complete preorder, and admin make preorder again, then that customer can complete preorder for the previous order.
+ - Removed maximum quantity, payment type from manage product page and displayed combination name with the product name.
+ - Removed payment method and added cancelled column from manage order page.
+ - Added a preview for the preorder product on listing page.
+ - Admin can see the product image and product id on search product page for creating preorder.
+
+## Bug
+ - Fixed issue, available preorder mail will send to the customer in admin context language.
+ - When admin disable the module, all preorder products will be disabled.
+ - Fixed issue, when customer completes the preorder, then quantity will be deducted from the catalog.
+ - Fixed issue of timer on quick view opened from the preorder products page.
+ - Fixed issue if product has one combination without preorder and one with preorder, then the preorder without combination must be restricted If it goes out of stock.
+ - Fixed issue if product has no carrier selected before making it partial preorder then don't assign any carrier on that product when preorder gets available.
+ - Fixed issue, redirection on admin order details page while click on view button in preorder order list in Prestashop 1.7
+ - Fixed issue, complete preorder button on order detail page is not visible on mobile.
+ - Fixed issue, on available of preorder, product should be in allow order state for partial/dynamic payment.
+ - Fixed issue, when customer increases the quantity of the preorder product from the cart page, then validation does not appear.
+
+Table Structure changed:
+Table altered:
+- `wk_preorder_product_customer`
+	- Add new column `disallow_order` after `preorder_complete`
+- `wk_preorder_product`
+	- Add new column `recreation_date` after `id_default_currency`
+- `wk_preorder_product_shop`
+	- Add new column `recreation_date` after `id_default_currency`
+
+- Add new table `wk_preorder_order_map` to manage complete preorders.
+- Add new table `wk_preorder_custom_price` to manage custom price.
+- Delete table `wk_preorder_cartrule_map`
+- Delete table `wk_preorder_free_shipping`
+- Delete table `wk_preorder_specific_price`
+- Delete table `wk_preorder_specific_price_shop`
+- Delete table `wk_preorder_cartrule_map_shop`
+
+-----------------------------------------------------------------
+Change Log : V5.0.1 To V5.0.2 | COMPATIBLE:: PRESTASHOP V1.7
+-----------------------------------------------------------------
+## Update Policy:
+    - Update only zip file of module new version
+
+## Improvements:
+    - Added breadcrumb on preorder product page.
+    - Added 'Available Preorder Quantity' column in AdminNewPreorderController.
+	- Admin can show or hide Preorder Product Availability Date.
+	- Admin can show or hide Preorder Product Content.
+	- Admin can write content for full payment and dynamic/partial payment.
+
+## Bug
+	- Fixed the issue 'Available Preorder Quantity' must remain accordingly same after the preorder completion.
+	- Fixed the issue if available preorder quantity is 0, then order of that product will restricted.
+	- Fixed the issue when disable preorder with partial payment/dynamic payment, then original price & quantity must appear at product page.
+	- Fixed the issue of incorrect product quantity and behaviour is shown in preorder with dynamic payment.
+	- Fixed the issue Product partial price after specific price is not showing correct.
+	- Fixed the issue Admin is able to set preorder price of combination more than its original price.
+	- Fixed the issue of quantity, when change partial payment preorder into full payment preorder.
+	- Fixed the issue of incorrect preorder price when set preorder at combination product.
+	- Fixed the issue While getting move from partial type to dynamic on same preorder then catalog price is not getting change
+	- Fixed the issue if edit preorder shipping issue then shipping is removed from cart
+	- Fixed the issue Inappropriate image on product when product has no image.
+	- Fixed the issue No success message at configuration page.
+	- Now 2 orders must get created,when order preorder product of full payment along with partial payment product.
+	- Fixed the issue 'Deny orders', once preorder with full payment gets completed.
+	- Fixed various text issues.
+
+-----------------------------------------------------------------
+Change Log : V5.0.0 To V5.0.1 | COMPATIBLE:: PRESTASHOP V1.7
+-----------------------------------------------------------------
+
+## Update Policy:
+    - Update only zip file of module new version
+
+## Bug
+	- Fixed the customer preorder issue in customer account
+
+
+-----------------------------------------------------------------
+Change Log : V4.1.1 To V5.0.0 | COMPATIBLE:: PRESTASHOP V1.7
+-----------------------------------------------------------------
+
+## Update Policy:
+    - Major changed in database and file, need uninstall, DELETE and upload and install the new version module.
+
+## Bug
+	- Fixed the issue Product is not becoming normal product while disable product from edit product page
+	- Fixed product-prices div class in applying on all product instead of preorder product page
+	- Fixed quantity issue when multiple preorder in same cart
+	- Fix filter issues
+	- Fix setlocale code that we are using for translation date_format on product page
+
+## New Features
+	- Module is multishop compatible (fully)
+	- Set partial preorder voucher expiry time configurable according to admin. currently we are creating it for 1 year
+	- Now all preorder can be shown at one page in  Front office.
+	- Customer can see their purchased preorder product list in my account's tab
+	- Admin can complete preorder before its expected date.
+	- Guest can also checkout preorder product (only if guest checkout is enabled)
+
+## Improvements
+	- Manage validation from checkout page instead of cartController override, while add to cart preorder product
+	- flipclock is responsive on category page and product page
+	- Improve Mail templates file.
+	- Improves quantity settling as now preorder quanity will be reserved when the preorder is available.
+	- Preorder price is displayed with currency in preorder list in Back office.
+	- Voucher is available from the date on which the admin will complete the preorder by changing the availaibility date
+	- Bulk action provided to disable all the preorder at once.
+	- Preorder time will be updated with the help of cron now.
+
+
+File Structure changed:
+- Remove install.sql file and use class PreorderInstall to create tables
+- Changed controller name AdminPreorder to AdminWkPreorderTab
+
+Table Structure changed:
+Table altered:
+- `wk_preorder_cartrule_map`
+	- Add new column `id_wk_preorder` after `product_cust_id`
+
+- Add new table `wk_preorder_product_shop` to manage preorder product shop wise.
+- Add new table `wk_preorder_product_customer_shop` to manage preorder product customer shop wise.
+- Add new table `wk_preorder_product_map_shop` to manage preorder product map shop wise.
+- Add new table `wk_preorder_specific_price_shop` to manage preorder product specific price shop wise.
+
+- Change column name to `id_wk_preorder_product` from `id` in table `wk_preorder_product`
+- Change column name to `id_wk_preorder_product_customer` from `id` in table `wk_preorder_product_customer`
+- Change column name to `id_wk_preorder_cartrule_map` from `id` in table `wk_preorder_cartrule_map`
+- Change column name to `id_wk_preorder_product_map` from `id` in table `wk_preorder_product_map`
+- Change column name to `id_wk_preorder_free_shipping` from `id` in table `wk_preorder_free_shipping`
+- Change column name to `id_wk_preorder_specific_price` from `id` in table `wk_preorder_specific_price`
+
+-----------------------------------------------------------------
+Change Log : V4.1.0 To V4.1.1 | COMPATIBLE:: PRESTASHOP V1.7
+-----------------------------------------------------------------
+
+## Update Policy:
+    - Update only zip file of module new version
+
+## Bug
+	- Remove last character (-) from combination list when add new preorder
+	- Fix issue to add custom price on product quick view
+	- Display price with tax included or tax excluded according customer group settings
+	- Fix mail `available_mail_to_customer` send issue when preorder become available
+	- Manage dynamic payment price tax incl. and excl. according to customer group
+	- Fix preorder quantity reset issue on preorder update while using full payment
+	- Fix voucher applied issue even voucher is disabled or expired or voucher 'From date' is not started yet.
+	- Customer order history fatal error issue fix while uninstall preorder module
+
+## New Features
+	- Added 9 languages translation - Arabic(ar), Catalan(ca), France(fr), Spanish(es), German(de), Italian(It), Japanese(ja), Dutch(nl), Galician(gl),
+	- Display Product name with product ID on preorder list in BackOffice
+
+## Improvements
+	- Improve add preorder form desing in BackOffice
+	- Add 'Save and stay' button while edit preorder
+	- Change 'Automatic Available' title to 'Show Timer' on preorder list in BackOffice
+	- Change preorder tab name in BackOffice
+	- Improve classes file name with PSR-2 standard
+	- Remove genRandomCode function and used Tools::passwdGen() direct
+	- If guest checkout is enabled then user will mandatory to login before add to cart
+
+
+-----------------------------------------------------------------
+Change Log : V4.0.0 To V4.1.0 | COMPATIBLE:: PRESTASHOP V1.7
+-----------------------------------------------------------------
+
+## New Features
+	- Admin can preview the product as soon as they created any product in preorder from preorder list.
+	- Front end - Quick view will also manage to display time clock and preorder button
+	- Admin can also hide the time clock if they don't want to display at front end.
+
+## Bug
+	- Missing index file and security code has been added.
+
+## Improvements
+	- New order status for preorder will be created by orderstatus object instead of manual query
+
+## Table Alteration
+	- wk_preorder_product_status removed, Now Configuration value of 'PS_OS_PREORDER' will be used instead of table
+
+## Classes
+	- Added new class preorderhelper.php - To Manage all the processing work like updating order status or creating status
+
+
+-----------------------------------------------------------------
+Change Log : V2.0.0 To V4.0.0 | COMPATIBLE:: PRESTASHOP V1.7
+-----------------------------------------------------------------
+
+## New Features
+	- Compatible with only Prestashop version 1.7
+
+Features will not work
+-	On category or home page, timer clock will not be display. ( Because of design issue)
+-	No Error message like login need to be required for preorder display, Removed by prestashop.
+Changes -
+
+## New Hooks
+	- DisplayProductPriceBlock
+	- ActionFrontControllerSetMedia
+	- DisplayReassurance
+
+## Removed Hooks
+	- hookDisplayRightColumnProduct
+
+## Note
+	- There is one core change need to be done, in order to make preorder work properly on order detail controller
+order-detail.tpl - {$HOOK_DISPLAYORDERDETAIL}
+	- Add nofilter with the hook i.e {$HOOK_DISPLAYORDERDETAIL nofilter}
+
+-----------------------------------------------------------------
+Change Log : V2.0.0 | COMPATIBLE:: PRESTASHOP V1.6
+-----------------------------------------------------------------
+
+## New Features
+	- Dynamic payment method available.
+	- Customer can enter the custom price for the preorder product.
+	- Admin can opt dynamic payment method with percentage or fixed amount for making a minimum preorder price.
+	- Admin can set the limit for getting order for preorder product.
+
+## Bug Fixed
+	- During the installation, range_weight and range_price throwing fatel error due to field already exist.
+
+## New tables
+	- Table wk_preorder_specific_price added to keep mapping data for specific price for the customers
+	- Table wk_preorder_product - added a new field maxquantity, to manage maximum orders for preorder product.
+
+## Table Alter -
+	- wk_preorder_product
+		Added "id_default_currency", "maxquantity", "payment_method"
+
+	- wk_preorder_product_customer
+		Added "country", "state"
+
+	- wk_preorder_cartrule_map
+		Added "country", "state"

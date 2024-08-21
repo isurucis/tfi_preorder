@@ -1,0 +1,10 @@
+Bonjour {firstname} {lastname},
+
+Votre Produit Précommandé {product_name} est maintenant dans la boutique. Vous avez payé{paid_amount} comme Prix de Précommande pour {product_name}.
+S'il vous plaît se connecter et compléter votre Précommande avant qu'il va hors de stock encore!. {allowed_days}
+
+Merci.
+
+{shop_name} - {shop_url}
+
+{shop_url} powered by PrestaShop™

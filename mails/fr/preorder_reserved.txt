@@ -1,0 +1,23 @@
+[{shop_url}]
+
+Bonjour {firstname} {lastname},
+
+Merci pour votre Ordre avec référence {order_name} de
+{shop_name}.
+
+Votre Produit de Précommande a été réservé
+Product Name -
+{preorder_product_name}
+Une fois qu'il sera disponible dans le stock, vous serez informé en conséquence.
+
+Vous pouvez vérifier votre commande et télécharger votre facture de
+"Histoire des Commandes" [{history_url}] section de votre compte de client en cliquant "Mon Compte"
+[{my_account_url}] sur notre boutique.
+
+Si vous avez un compte invité, vous pouvez suivre votre commande via le
+"Suivi des clients"
+[{guest_tracking_url}?id_order={order_name}] section sur notre boutique.
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/]
+
